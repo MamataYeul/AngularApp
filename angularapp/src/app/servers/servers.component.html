@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+
+    <label>{{name}}</label>
+    <p> Server with Id {{serverId}} is {{  getServerStatus()}}</p>
+ 
+        <h2> This is a warning, you are in danger!</h2>
+        <h3> You are so successful!</h3>
+        
+    </div>
+    <button [disabled]="!allowNewServer"(click)="onCreateServer()">Add Server</button>
+<!-- <img [src]="imgUrl"> -->
+{{serverCreationStatus}}
+    
+
+ 
+  
+
+
