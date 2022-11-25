@@ -13,6 +13,8 @@ serverStatus : string ='Online';
 allowNewServer = false;
 inputurl= 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png?20221110153201';
 serverCreationStatus: string= 'server not created';
+serverName: string= "Codemind.com"
+userName : string="Mamata"
 
   constructor() { 
     setTimeout(()=>{
@@ -25,6 +27,12 @@ serverCreationStatus: string= 'server not created';
   onCreateServer(){
     this.serverCreationStatus = 'Server created';
   }
+  ClearFields(){
+    this.userName="";
+
+  }
+
+  
 
 
 

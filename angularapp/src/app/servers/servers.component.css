@@ -12,3 +12,10 @@ h3{
     background-color: greenyellow;
     border:  2px solid green;
 }
+label{
+
+    font-size: x-large;
+    text-decoration: solid;
+    background: gray;
+    color:crimson;
+}

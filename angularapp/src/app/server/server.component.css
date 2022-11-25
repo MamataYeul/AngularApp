@@ -5,3 +5,14 @@
 #test1 {
     background-color: red;
 }
+h2{
+    text-align: center;
+    background-color: palevioletred;
+    border:  2px solid brown;
+}
+
+h3{
+    text-align:center ;
+    background-color: greenyellow;
+    border:  2px solid green;
+}
