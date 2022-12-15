@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormGroup,FormControl,FormControlName} from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public uid:number;
-  title ='Angular Batch 4';
+  title ='Angular Reactive Form';
+  loginForm = new FormGroup({
+    user: new FormControl(''),
+    email: new FormControl(''),
+  })
+  loginUser(){
+    console.log(this.loginForm.value);
+    
+  }
   
 }

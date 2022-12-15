@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
@@ -14,6 +13,7 @@ import { DirassignComponent } from './dirassign/dirassign.component';
 import { BindingComponent } from './binding/binding.component';
 // import { SimpleformComponent } from './simpleform/simpleform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reactive-form-assignment.component';
 
 
 
@@ -31,6 +31,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     BindingComponent,
     // SimpleformComponent,
     ReactiveformComponent,
+    ReactiveFormAssignmentComponent,
   
    
     
