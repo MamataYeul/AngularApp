@@ -1,27 +1,93 @@
 <p *ngIf="isShow">directive works!</p>
 <div>
-    <div>
-        {{title}}
-    </div>
+  <div>
+    {{ title }}
+  </div>
 </div>
 <div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Director</th>
-                <th>Cast</th>
-                <th>Release Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let movie of movies; let i=index;">
-                <td>{{movie.title}}</td>
-                <td>{{movie.director}}</td>
-                <td>{{movie.cast}}</td>
-                <td>{{movie.releaseDate}}</td>
-
-            </tr>
-        </tbody>
-    </table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Director</th>
+        <th>Cast</th>
+        <th>Release Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies; let i = index">
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.director }}</td>
+        <td>{{ movie.cast }}</td>
+        <td>{{ movie.releaseDate }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+<p *ngIf="isShow">Demo Directive Component</p>
+<div>
+  <div>
+    {{ title1 }}
+  </div>
+</div>
+<div>
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>Mobile Name</th>
+        <th>Company Name</th>
+        <th>Release Date</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mobile of mobile; let i = index">
+        <td>{{ mobile.mobileName }}</td>
+        <td>{{ mobile.companyName }}</td>
+        <td>{{ mobile.releaseDate }}</td>
+        <td>{{ mobile.rating }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+<div>
+  <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th>VegetableName</th>
+        <th>Color</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vegetable of vegetable; let i = index">
+        <td>{{ vegetable.name }}</td>
+        <td>{{ vegetable.color }}</td>
+        <td>{{ vegetable.perKg }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+<div>
+  <table class="table table-success">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Taste</th>
+        <th>Price</th>
+        <th>Mostly in City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let friut of fruit; let i = index">
+        <td>{{ fruit.name }}</td>
+        <td>{{ fruit.taste }}</td>
+        <td>{{ fruit.price }}</td>
+        <td>{{ fruit.location }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

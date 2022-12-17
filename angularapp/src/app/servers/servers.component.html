@@ -8,7 +8,7 @@
     <label>{{name}}</label>
     <p> Server with Id {{serverId}} is {{  getServerStatus()}}</p>
     <button [disabled]="!allowNewServer"(click)="onCreateServer()">Add Server</button>
-<!-- <img [src]="imgUrl"> -->
+<img [src]="imgUrl">
 {{serverCreationStatus}}
 <div>Two way Data Binding</div>
 <div>
@@ -23,7 +23,8 @@
     <h1>Assignment No:2  Two Way Data Binding</h1>
     <label>User Name: <input type ="textbox" [(ngModel)]= "userName" required></label><br><br>
     <label> Enter User Name :  {{userName}}</label><br><br>
-    <button  (click)="ClearFields();">Clear</button>
+    <button  (click)="ClearFields()">Clear</button>
+    <button type="button" class="btn btn-primary">Primary</button>
 
 </div>
     

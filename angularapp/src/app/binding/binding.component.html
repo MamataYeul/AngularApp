@@ -1,26 +1,60 @@
 <h2> We are learning Data binding Concepts One Way Data Binding and Two way Data Binding!</h2>
-<h4> 1. String Interpolation 2. Property Binding,3.Event Binding, 4. Banana In a box</h4>
+<h4> 1. String Interpolation 2. Property Binding,3.Event Binding, 4. [(ngModel)]Banana In a box</h4>
 <hr>
 <ol>String Interpolation </ol>
 <p>My Name is {{name}}</p>
-<li> Welcome to Angular App {{name}}</li>
+<!-- <li> Welcome to Angular App {{name}}</li>
 <li>{{" Welcome "+ name}}</li>
 <li>The length of name is:{{name.length}}</li>
 <li>{{name.toUpperCase()}}</li>
 <li>{{greetUser()}}</li>
 <li>{{greetUser1()}}</li>
-<li>Additin of 2+2={{2+2}}</li>
+<li>Additin of 2+2={{2+2}}</li> -->
 <li>The roll number is {{Id}}</li>
 <li>The server Id is {{serverId}} andstatus is {{getServerStatus()}}</li>
 <input type="text" value="Ashish Vasantrao Bhunte" placeholder="Enter Your Name">
-
 <hr>
 <ol>Property Binding</ol>
-<button [disabled]="!allowNewServer">Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button [disabled]="!allowNewServer" class="btn btn-success">Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <hr>
-<button [disabled]="!allowNewServer">Login</button><hr>
-<button [disabled]="!alloNewServer" (click)="onCreateServer()">Add Server</button>
-<div>{{serverCreationStatus}}</div>
+<button [disabled]="allowNewServer" class="btn btn-info">Login</button><hr>
 <!-- <img [src]=imgUrl alt="Image Of TypeScript logo"><hr>
 <img [src]=imgUrl1 alt="Image Of TypeScript logo1"> -->
 <ol>Event Binding-Cursor,Click ,hover,Keyup,Keypress Event </ol>
+<button [disabled]="alloNewServer" class="btn btn-secondary"  (click)="onCreateServer()">Add Server</button>
+<div>{{serverCreationStatus}}</div>
+<hr>
+<div>Two Way Data Binding[()] Banana in a box</div>
+<div>
+    <input type="text"[(ngModel)]='serverName'>{{serverName}}
+</div>
+<hr>
+<div>
+    <input type="text"[(ngModel)]='myName'>{{myName}}
+</div>
+<br>
+<div>
+    Course Name:<input type="text" [(ngModel)]="courseName">
+    {{courseName}}
+</div>
+<hr>
+<div>
+   <ol> 
+    <li>User Name:   <input type="text" [(ngModel)]="myName"></li><br/>
+    <li><p>User Name:  {{myName}}</p></li><br/>
+   <li>Password:  <input type="password" [(ngModel)]="password"></li>
+   <li><button [disabled]="allowUserName"  class="btn btn-primary" (click)="onClickUser()">Clear</button></li>
+<button type="submit" [disabled]="!ngForm.valid">Submit</button>
+</ol>
+</div>
+
+<hr>
+<button type="button" class="btn btn-dark">Primary</button>
+<br/>
+<div class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+  </div>
+
+  
+
+

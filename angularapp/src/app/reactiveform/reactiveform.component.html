@@ -35,8 +35,16 @@
                     <label for="{{gender.id}}">{{gender.value}}</label>
                 </div>
                 </div>
-                <button class="btn btn-success mt-4">Submit</button>
+                <div class="form-group" formArrayName="skills">
+                    <label>Skills</label>
+                    <ng-container *ngFor="let skill of this.myReactiveForm.get('skills').control;index as i">
+                        <input type="text" class="form-control mt-2" formControlName="{{i}}" placeholder="Add Skills">
+                    </ng-container>
+                    <button class="btn btn-light btn-sm mt-4 btn-add" (click)="OnAddSkill()"><i>+</i>Add Skills</button>
+                </div>
+                <button class="btn btn-success mt-4 ">Submit</button>
             </form>
         </div>
+
     </div>
 </div>
