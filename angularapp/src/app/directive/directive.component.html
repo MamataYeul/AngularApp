@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let movie of movies; let i = index">
+      <tr *ngFor="let movie of movies; let i = index;">
         <td>{{ movie.title }}</td>
         <td>{{ movie.director }}</td>
         <td>{{ movie.cast }}</td>
@@ -62,7 +62,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let vegetable of vegetable; let i = index">
+      <tr *ngFor="let vegetable of vegetable; let i = index;">
+        {{i+1}}
         <td>{{ vegetable.name }}</td>
         <td>{{ vegetable.color }}</td>
         <td>{{ vegetable.perKg }}</td>
@@ -82,7 +83,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let friut of fruit; let i = index">
+      <tr *ngFor="let fruit of fruit; let i = index">
         <td>{{ fruit.name }}</td>
         <td>{{ fruit.taste }}</td>
         <td>{{ fruit.price }}</td>

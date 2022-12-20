@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-ngswitch',
   templateUrl: './ngswitch.component.html',
@@ -17,5 +18,6 @@ export class NgswitchComponent implements OnInit {
     console.log(value.target.value);
     this.selectedProduct = value.target.value;
   }
+ 
 }
 

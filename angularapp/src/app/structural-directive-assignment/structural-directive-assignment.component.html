@@ -1,0 +1,50 @@
+<p>structural-directive-assignment works!</p>
+<div>
+    {{ title }}
+</div>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Course Id</th>
+                <th>Course Name</th>
+                <th> CourseFee</th>
+                <th> Student Intake</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let technologies of technologies; let i = index">
+                <td>{{ technologies.id }}</td>
+                <td>{{ technologies.name }}</td>
+                <td>{{ technologies.fee }}</td>
+                <td>{{ technologies.intake }}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <select class="form-control" (change)="getCourseValue($event)">
+                <option value="Default">Select Course Name </option>
+                <option value="HTML">HTML</option>
+                <option value="CSS3">CSS3</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="TypeScript">TypeScript</option>
+                <option value="Angular">Angular</option>
+
+            </select>
+        </div>
+        <div class="col-md-12" [ngSwitch]="selectedCourse">
+            <h2 class="text-success" *ngSwitchDefault>Please select course</h2>
+            <h2 class="text-success" *ngSwitchCase="'HTML'">HTML</h2>
+            <h2 class="text-success" *ngSwitchCase="'CSS3'">CSS3</h2>
+            <h2 class="text-success" *ngSwitchCase="'JavaScript'">JavaScript </h2>
+            <h2 class="text-success" *ngSwitchCase="'TypeScript'">TypeScript</h2>
+            <h2 class="text-success" *ngSwitchCase="'Angular'">Angular</h2>
+        </div>
+    </div>
+</div>

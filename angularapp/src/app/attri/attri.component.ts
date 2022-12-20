@@ -27,7 +27,35 @@ people:any[] = [
   {
     "name": "Surya",
     "country": "USA"
+  },
+  {
+    "name":"Mamata",
+    "country":"India"
   }
+]
+student:any[]=[
+  {
+    'name':"Mamata",
+    'age':30
+  },
+  {
+    'name':"Prashant",
+    'age':35
+  },
+  {
+    'name':"Ashish",
+    'age':30
+  },
+  {
+    'name':"Sachin",
+    'age':35
+  },
+  {
+    'name':"Abhinandan",
+    'age':30
+  }
+  
+
 ]
   constructor() { }
 

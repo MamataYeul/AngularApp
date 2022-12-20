@@ -1,10 +1,13 @@
-<div [ngStyle]="{'color':colorVal,'background-color':'#ddd'}">Learning Angular 8</div>
+<div [ngStyle]="{'color':colorVal, 'background-color':'#ddd'}">Learning Angular 8</div>
 <h4>Ng Class</h4>
 <ul *ngFor="let person of people">
     <li [ngClass]="{
         'text-success':person.country==='UK',
         'text-primary': person.country==='USA',
-        'text-danger': person.country==='HK'
+        'text-danger': person.country==='HK',
+        'text-info':person.country==='India'
+       
+       
     }">
     {{person.name}} ({{person.country}})
 
@@ -12,3 +15,17 @@
 </ul>
 <p>Normal para</p>
 <p appCustdir>Custom Para</p>
+<div appCustdir>Custom Directive Div</div>
+<hr>
+<div [ngStyle]="{'color':'red', 'background-color':'#ddd'}"> I am leaning Angular Journey </div>
+<h4>Ng Class</h4>
+<ul *ngFor="let student of student">
+    <li [ngClass]="{
+        'text-info':student.age===30,
+        'text-success':student.age===35
+
+    }">
+    {{student.name}} ({{student.age}})
+
+    </li>
+</ul>

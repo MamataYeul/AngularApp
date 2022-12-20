@@ -14,6 +14,10 @@ import { BindingComponent } from './binding/binding.component';
 // import { SimpleformComponent } from './simpleform/simpleform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reactive-form-assignment.component';
+import { StructuralDirectiveAssignmentComponent } from './structural-directive-assignment/structural-directive-assignment.component';
+import { CustdirassignDirective } from './custdirassign.directive';
+import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
+import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 
 
 
@@ -32,6 +36,10 @@ import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reac
     // SimpleformComponent,
     ReactiveformComponent,
     ReactiveFormAssignmentComponent,
+    StructuralDirectiveAssignmentComponent,
+    CustdirassignDirective,
+    Servicecomp1Component,
+    Servicecomp2Component,
   
    
     
