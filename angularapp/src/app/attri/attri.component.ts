@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./attri.component.css']
 })
 export class AttriComponent implements OnInit {
+  uname:any;
 colorVal= 'blue';
 people:any[] = [
   {
@@ -33,33 +34,38 @@ people:any[] = [
     "country":"India"
   }
 ]
-student:any[]=[
-  {
-    'name':"Mamata",
-    'age':30
-  },
-  {
-    'name':"Prashant",
-    'age':35
-  },
-  {
-    'name':"Ashish",
-    'age':30
-  },
-  {
-    'name':"Sachin",
-    'age':35
-  },
-  {
-    'name':"Abhinandan",
-    'age':30
-  }
+// student:any[]=[
+//   {
+//     'name':"Mamata",
+//     'age':30
+//   },
+//   {
+//     'name':"Prashant",
+//     'age':35
+//   },
+//   {
+//     'name':"Ashish",
+//     'age':30
+//   },
+//   {
+//     'name':"Sachin",
+//     'age':35
+//   },
+//   {
+//     'name':"Abhinandan",
+//     'age':30
+//   }
   
 
-]
+// ]
   constructor() { }
 
   ngOnInit() {
+  }
+  show(value){
+    this.uname=value;
+    // console.log(value.target.value);
+    
   }
 
 }

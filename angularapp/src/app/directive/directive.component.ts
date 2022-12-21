@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { mobile } from '../models/mobile';
 import { Movie } from '../models/movies';
 import { vegetable } from '../models/vegetable';
@@ -10,6 +10,7 @@ import { fruit } from '../models/fruit';
   styleUrls: ['./directive.component.css']
 })
 export class DirectiveComponent implements OnInit {
+
 
   isShow:boolean=true;
   title :string ="Top 3 Movies";
@@ -39,9 +40,17 @@ export class DirectiveComponent implements OnInit {
     {name:'Strowberry',taste:'sweet',price:80,location:'Mahabaleswar'},
     {name:'Hapus',taste:'sweet',price:49,location:'Ratnagiri'}
   ]
+  @Input() myinputMsg:string;
+  @Input() empinputData:object;
+  // @Input() employee:string;
   constructor() { }
 
   ngOnInit() {
+    console.log('The Value Coming From Parent', this.myinputMsg);
+    console.log('The Value coming from app component',this.empinputData);
+    // console.log('The Value from parent component',this.employee);
+    
+    
   }
 
 }

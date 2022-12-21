@@ -6,8 +6,6 @@
         'text-primary': person.country==='USA',
         'text-danger': person.country==='HK',
         'text-info':person.country==='India'
-       
-       
     }">
     {{person.name}} ({{person.country}})
 
@@ -16,7 +14,15 @@
 <p>Normal para</p>
 <p appCustdir>Custom Para</p>
 <div appCustdir>Custom Directive Div</div>
-<hr>
+<div style="margin-left: 300px;">
+    <input type="text" name="" id="" #uusername (keyup.enter)="show(uusername.value)">
+</div>
+<button (click)="show(uusername.value)">Show</button>
+<div>
+    {{uname}}
+</div>
+
+<!-- <hr>
 <div [ngStyle]="{'color':'red', 'background-color':'#ddd'}"> I am leaning Angular Journey </div>
 <h4>Ng Class</h4>
 <ul *ngFor="let student of student">
@@ -28,4 +34,4 @@
     {{student.name}} ({{student.age}})
 
     </li>
-</ul>
+</ul> -->
