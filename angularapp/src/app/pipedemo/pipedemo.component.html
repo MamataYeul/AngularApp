@@ -1,0 +1,34 @@
+<p>pipedemo works!</p>
+<div>
+    <h3>Builds-In Pipes</h3>
+    <h5>Date</h5>
+
+    Simple Date: {{todaysDate}}<br/>
+    Using Date Pipe:{{todaysDate|date}}<br/>
+    Using ShortDate Today's Date:{{todaysDate| date:'shortDate'}}<br/>
+    Using fullDate Today's Date:{{todaysDate| date:'fullDate'}}<br/>
+    Using Today's Date:{{todaysDate| date:'dd/m/yyyy'}}<br/>
+    Using LowerCase Today's Date:{{todaysDate| date:'fullDate' |lowercase}}<br/>
+    Using UpperCase Today's Date:{{todaysDate| date:'fullDate' |uppercase}}<br/>
+</div>
+<hr>
+<div>
+    get values {{obser | async}}
+</div>
+
+<hr>
+<!-- inbuild pipes below are:- -->
+<div>
+    <div>Currency Pipe:
+        {{price | currency:"INR"}}<br/>
+        {{price | currency:"USD"}}<br/>
+        {{price | currency:"EURO"}}<br/>
+        {{obj|json}}<br/>
+
+    </div>
+</div>
+
+<!-- custom pipes below are:- -->
+<div>
+    {{price|count}}
+</div>

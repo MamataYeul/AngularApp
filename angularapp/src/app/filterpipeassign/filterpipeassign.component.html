@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Pipe Assignment</title>
+</head>
+<!-- <caption class="caption">Filter Pipe Assignment</caption> -->
+<body class="body">
+    <h2>Filter Pipe Assignment</h2><br/>
+    <div class="row justify-content-center">
+        <div class="col-md-8 form-inline mb-2">
+            <label for="empid"> Search by gender</label>
+            <input type="text" class="form-control" id="empid" placeholder="Enter emp gender prefix" [(ngModel)]="namesearch">
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                 <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Salary</th>
+    
+                    </tr>
+                 </thead>   
+                 <tbody>
+                    <tr *ngFor="let emp of empArr | filter:namesearch">
+                        <th scope="row">{{emp.id}}</th>
+                        <td>{{emp.name}}</td>
+                        <td>{{emp.city}}</td>
+                        <td>{{emp.gender}}</td>
+                        <td>{{emp.department}}</td>
+                        <td>{{emp.company}}</td>
+                        <td>{{emp.salary}}</td>
+                    </tr>
+                 </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

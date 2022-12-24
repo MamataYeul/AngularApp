@@ -6,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./demo.component.css']
 })
 export class DemoComponent implements OnInit {
-    // @Input() employee:string;
+    // @Input() employee:any;
     //@output decorator is custom event
   @Output() foodevent:EventEmitter<string>=new EventEmitter<string>();
 

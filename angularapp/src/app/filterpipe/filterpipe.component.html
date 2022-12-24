@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Pipe Component Learning</title>
+</head>
+<body class="body">
+    <div class="row justify-content-center">
+        <div class="col-md-8 form-inline mb-2">
+            <label for="productid"> Search by product</label>
+            <input type="text" class="form-control" id="productid" placeholder="Enter product name" [(ngModel)]="namesearch">
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                 <thead>
+                    <tr>
+                        <th scope="col">Sno</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Availibility</th>
+    
+                    </tr>
+                 </thead>   
+                 <tbody>
+                    <tr *ngFor="let product of productArr | filter:namesearch">
+                        <th scope="row">{{product.sno}}</th>
+                        <td>{{product.name}}</td>
+                        <td>{{product.price}}</td>
+                        <td><span class="badge">{{product.availability}}</span>td>
+                    </tr>
+                 </tbody>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+

@@ -25,6 +25,18 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 import { DemoComponent } from './demo/demo.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { CountPipe } from './count.pipe';
+import { PipepracticeComponent } from './pipepractice/pipepractice.component';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+import { FilterPipe } from './filter.pipe';
+import { FilterpipeassignComponent } from './filterpipeassign/filterpipeassign.component';
+import { Servicecard1Component } from './servicecard1/servicecard1.component';
+import { Servicecard2Component } from './servicecard2/servicecard2.component';
+import { ServicecontactComponent } from './servicecontact/servicecontact.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -54,6 +66,18 @@ import { DemoComponent } from './demo/demo.component';
     Comp3Component,
     Comp4Component,
     DemoComponent,
+    PipedemoComponent,
+    CountPipe,
+    PipepracticeComponent,
+    FilterpipeComponent,
+    FilterPipe,
+    FilterpipeassignComponent,
+    Servicecard1Component,
+    Servicecard2Component,
+    ServicecontactComponent,
+    AboutusComponent,
+    ContactusComponent,
+    ProductComponent,
   
 
  

@@ -1,0 +1,23 @@
+<p>pipepractice works!</p>
+<div style="width:100%;"></div>
+<div style="width: 40%; float: left; border: solid 2px green;"></div>
+<h1>Uppercase Pipe</h1>
+<b>{{title|uppercase}}</b><br/>
+<h1>Lowercase Pipe</h1>
+<b>{{title|lowercase}}</b>
+<h1>Currency Pipe</h1>
+<b>{{6589.23|currency:"USD"}}</b><br/>
+<b>{{6589.23|currency:"USD":true}}</b><br/>
+<!-- //Boolean true is used to get the sign of the currency -->
+<b>{{80000|currency:"INR"}}</b><br/>
+<!-- <b>{{50000|currency:""}}</b> -->
+<h1>Date Pipe</h1>
+<b>Simple Date:{{todayDate}}</b><br/>
+<b>full Date :{{todayDate|date:'shortDate'}}</b><br/>
+<b>Short Date:{{todayDate|date:'dd/m/yyyy'}}</b><br/>
+<b> Date:{{todayDate|date:'fullDate' |uppercase}}</b><br/>
+<b>Simple Date:{{todayDate|}date:'fullDate' |lowercase}</b><br/>
+
+
+
+
