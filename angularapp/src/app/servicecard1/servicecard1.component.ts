@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-servicecard1',
@@ -11,5 +12,10 @@ export class Servicecard1Component implements OnInit {
 
   ngOnInit() {
   }
+  btnClick(){
+    const msgService= new MessageService();
+    msgService.messageAlert();
+  }
+
 
 }

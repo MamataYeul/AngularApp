@@ -17,8 +17,9 @@ counter;
 num:number = 1;
   constructor() {
     this.pi = 3.14;
-    console.log(" constructor called");
+    console.log("HooksComponent constructor called");
    }
+  
    ngOnDestroy(): void {
      console.log("ngOnDestroy called");
      clearInterval(this.counter);
@@ -51,25 +52,26 @@ num:number = 1;
   ngOnChanges(changes: SimpleChanges): void {
 
     console.log(" ngOnChanges called");
-    //console.log(this.parentData);
-    // for (const propname in changes) {
-    //   const prop = changes[propname];
+    console.log(this.parentData);
+    for (const propname in changes) {
+      const prop = changes[propname];
 
-    //   const {previousValue, currentValue, firstChange} = prop;
+      const {previousValue, currentValue, firstChange} = prop;
 
-    //   console.log(`Prop name ${propname}`);
-    //   console.log(`Prev  value ${previousValue}`);
-    //   console.log(`Current value ${currentValue}`);
-    //   console.log(`First change ${firstChange}`);
-    //   console.log("---------------")
+      console.log(`Prop name ${propname}`);
+      console.log(`Prev  value ${previousValue}`);
+      console.log(`Current value ${currentValue}`);
+      console.log(`First change ${firstChange}`);
+      console.log("---------------")
 
-    // }
+    }
     
   }
-
    // hooks 
+
+
   ngOnInit() {
-    console.log("ngOnInit called")
+    console.log("HooksComponent ngOnInit called")
     // api 
   }
 

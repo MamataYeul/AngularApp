@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./filterpipeassign.component.css"],
 })
 export class FilterpipeassignComponent implements OnInit {
-  namesearch;
+  namesearch:string='';
   empArr = ([] = [
     {
       id: 101,

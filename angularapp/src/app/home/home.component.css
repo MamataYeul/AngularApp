@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(224, 100, 125);
+    
+}
+.table-active{
+ 
+    font-size: larger;
+}
+h3{
+    font-weight:700px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: azure;
+    text-align: left;
+}
+pre{
+    font-family: 'Times New Roman', Times, serif;
+    text-align:justify;
+}

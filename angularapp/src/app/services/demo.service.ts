@@ -31,5 +31,4 @@ export class DemoService{
         return this.http.get(this.apiURL+posts);
     }
 
-
 }

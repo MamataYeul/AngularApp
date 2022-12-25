@@ -37,6 +37,11 @@ import { ServicecontactComponent } from './servicecontact/servicecontact.compone
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { GenderPipe } from './gender.pipe';
+import { GalleryComponent } from './gallery/gallery.component';
+import { RegistrationformComponent } from './registrationform/registrationform.component';
 
 
 
@@ -78,6 +83,11 @@ import { ProductComponent } from './product/product.component';
     AboutusComponent,
     ContactusComponent,
     ProductComponent,
+    HomeComponent,
+    LoginComponent,
+    GenderPipe,
+    GalleryComponent,
+    RegistrationformComponent,
   
 
  
