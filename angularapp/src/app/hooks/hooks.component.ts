@@ -17,58 +17,50 @@ counter;
 num:number = 1;
   constructor() {
     this.pi = 3.14;
-    console.log("HooksComponent constructor called");
+    console.log("HLifeCycle Hook constructor called");
    }
   
    ngOnDestroy(): void {
-     console.log("ngOnDestroy called");
+     console.log("LifeCycle Hook ngOnDestroy called");
      clearInterval(this.counter);
      
    }
   ngAfterViewChecked(): void {
-    console.log('ngAfterViewChecked called')
+    console.log('LifeCycle Hook ngAfterViewChecked called')
     this.viewChild.nativeElement.setAttribute('style',  `color:${this.parentData}`);
   }
   ngAfterViewInit(): void {
-   console.log('ngAfterViewInit called', this.viewChild);
+   console.log('LifeCycle Hook ngAfterViewInit called', this.viewChild);
   // this.viewChild.nativeElement.setAttribute('style',  `color:${this.parentData}`);
   }
   ngAfterContentChecked(): void {
-    console.log('ngAfterContentChecked called');
+    console.log('LifeCycle Hook ngAfterContentChecked called');
     this.contentChild.nativeElement.setAttribute('style', `color:${this.parentData}`);
   }
   ngDoCheck(): void {
-    console.log(' ngDoCheck called', this.contentChild);
+    console.log('LifeCycle Hook ngDoCheck called', this.contentChild);
   }
   ngAfterContentInit(): void {
-    console.log(' ngAfterContentInit called', this.contentChild);
+    console.log('LifeCycle Hook ngAfterContentInit called', this.contentChild);
     console.log('view int access', this.viewChild);
    // this.contentChild.nativeElement.setAttribute('style', 'color:green');
-
    //this.contentChild.nativeElement.setAttribute('style', `color:${this.parentData}`);
-
   }
   
   ngOnChanges(changes: SimpleChanges): void {
-
-    console.log(" ngOnChanges called");
+    console.log("LifeCycle Hook ngOnChanges called");
     console.log(this.parentData);
     for (const propname in changes) {
       const prop = changes[propname];
-
       const {previousValue, currentValue, firstChange} = prop;
-
       console.log(`Prop name ${propname}`);
-      console.log(`Prev  value ${previousValue}`);
+      console.log(`Prev value ${previousValue}`);
       console.log(`Current value ${currentValue}`);
       console.log(`First change ${firstChange}`);
       console.log("---------------")
-
     }
-    
   }
    // hooks 
-
 
   ngOnInit() {
     console.log("HooksComponent ngOnInit called")

@@ -16,7 +16,7 @@ import { BindingComponent } from './binding/binding.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reactive-form-assignment.component';
 import { StructuralDirectiveAssignmentComponent } from './structural-directive-assignment/structural-directive-assignment.component';
-import { CustdirassignDirective } from './custdirassign.directive';
+
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
@@ -36,12 +36,15 @@ import { Servicecard2Component } from './servicecard2/servicecard2.component';
 import { ServicecontactComponent } from './servicecontact/servicecontact.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { GenderPipe } from './gender.pipe';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationformComponent } from './registrationform/registrationform.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProductsModule } from './product/products.module';
+import { DemopostComponent } from './demopost/demopost.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
 
 
 
@@ -55,8 +58,6 @@ import { RegistrationformComponent } from './registrationform/registrationform.c
     DirectiveComponent,
     NgswitchComponent,
     AttriComponent,
-    CustdirDirective,
-   
     HooksComponent,
     DirassignComponent,
     BindingComponent,
@@ -82,24 +83,36 @@ import { RegistrationformComponent } from './registrationform/registrationform.c
     ServicecontactComponent,
     AboutusComponent,
     ContactusComponent,
-    ProductComponent,
+  
     HomeComponent,
     LoginComponent,
     GenderPipe,
     GalleryComponent,
     RegistrationformComponent,
+    PagenotfoundComponent,
+    DemopostComponent,
+    PostdetailsComponent,
+   
   
 
  
   ],
   imports: [
     BrowserModule,
+    ProductsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    console.log('App module called');
+    
+  }
+ }
