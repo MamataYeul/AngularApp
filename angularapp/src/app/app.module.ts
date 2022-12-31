@@ -42,9 +42,15 @@ import { GenderPipe } from './gender.pipe';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationformComponent } from './registrationform/registrationform.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ProductsModule } from './product/products.module';
+
 import { DemopostComponent } from './demopost/demopost.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
+// import { ProductsModule } from './product/products.module';
+// import { OrdersModule } from './orders/orders.module';
+import { AdduserComponent } from './adduser/adduser.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
+
+
 
 
 
@@ -92,20 +98,18 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     PagenotfoundComponent,
     DemopostComponent,
     PostdetailsComponent,
-   
-  
-
+    AdduserComponent,
+RapidapiComponent
  
   ],
   imports: [
     BrowserModule,
-    ProductsModule,
+    // ProductsModule,
+    // OrdersModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
-
   ],
   providers: [],
   bootstrap: [AppComponent]

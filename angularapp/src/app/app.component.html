@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center"> -->
 <!-- <button type="button" class="btn btn-primary">Primary</button>
 <input class="btn btn-primary" type="reset" value="Reset"> -->
 
@@ -34,25 +34,37 @@
   <app-demo (foodevent)="getDataFromChild($event)"></app-demo>
 </div> -->
 
-
 <!-- <select (change)="uid=sid.value" #sid>
   <option selected disabled>No value selected</option>
-<option [value]="id" *ngFor="let id of [1,2,3,4]"></option>
+<option [value]="id" *ngFor="let id of [1,2,3,4]">
 {{id}}
-</select>
+</option>
+</select> -->
 
-<app-hooks [userid]="uid" >
-  
-</app-hooks> -->
+<!-- <div class="row" style="text-align: center;">
+  <div class="col-md-12">
+    <input type="text" placeholder="enter text" (blur)="handleData($event)"><br><br> 
+    <p>Product Name:<input type="text" placeholder="enter product name"[(ngModel)]="name"></p>
+    <p>Product Price:<input type="text" placeholder="enter product price"[(ngModel)]="price"></p>
+    <button class="btn btn-primary" (click)="updateProduct()">Update Product</button>
+    <app-hooks [userid]="uid" [parentData]="data" [product]="product">
+      <h1>This is child content coming from parent component</h1>
+    </app-hooks>
+  </div>
+</div> -->
+
+
+
+<!-- <app-dirassign></app-dirassign> -->
 
 <!-- <app-reactiveform></app-reactiveform> -->
 <!-- <app-reactive-form-assignment></app-reactive-form-assignment> -->
-<app-servicecomp1></app-servicecomp1>
+<!-- <app-servicecomp1></app-servicecomp1>
 <app-servicecomp2></app-servicecomp2>
 <app-comp1></app-comp1><br>
 <app-comp2></app-comp2><br>
 <app-comp3></app-comp3><br>
-<app-comp4></app-comp4>
+<app-comp4></app-comp4> -->
 
 <!-- <app-pipedemo></app-pipedemo> -->
 <!-- <app-pipepractice></app-pipepractice> -->
@@ -62,7 +74,7 @@
 <app-servicecard2></app-servicecard2> -->
 
 
-<!-- <header >
+<header >
   <nav >
     <ul class="nav nav-tabs">
       <li class="nav-item"><a class="nav-link " routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/home">Home</a></li>
@@ -72,8 +84,10 @@
       <li class="nav-item"><a class="nav-link"  routerLinkActive="active" routerLink="product/">Product </a></li>
       <li class="nav-item"><a class="nav-link"  routerLinkActive="active " routerLink="gallery/">Gallery </a></li>
       <li class="nav-item"><a class="nav-link"  routerLinkActive="active " routerLink="post/">Post </a></li>
+      <li class="nav-item"><a class="nav-link"  routerLinkActive="active " routerLink="orders/">Orders </a></li>
+      <li class="nav-item"><a class="nav-link"  routerLinkActive="active " routerLink="add user/">Add User </a></li>
     </ul>
   </nav>
 </header> 
-
- <router-outlet></router-outlet> -->
+<button (click)="DeletePost()">Delete Post</button>
+ <router-outlet></router-outlet>

@@ -12,5 +12,13 @@ export class PostService {
   getPosts():Observable<any>{
     return this.httpClient.get(`${devAPIUrl}posts`);
   }
+  getPostById(id){
+    return this.httpClient.get(`${devAPIUrl}posts/`+id);
+  }
+  
+  deletePostById(id){
+    return this.httpClient.delete(`${devAPIUrl}posts/`+id);
+
+  }
 }
 

@@ -9,7 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UtilityModule } from '../models/utility.module';
 
 const prodRoutes: Routes=[
-  {path: "product",component: ProductComponent, children: [//localhost:4200//product/tv
+  {path: '',component: ProductComponent, children: [//localhost:4200//product/tv
       { path: "laptop", component: LaptopComponent },
       { path: "tablet", component: TabletComponent },
       { path: "tv", component: TvComponent },

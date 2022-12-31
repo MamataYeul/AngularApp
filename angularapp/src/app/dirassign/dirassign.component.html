@@ -1,15 +1,39 @@
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-           
-            <!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">Display Details</button> -->
-            <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
-            <p *ngIf="showSecret">Secret Password = tuna</p>
-            <div *ngFor="let logItem of log"
-             [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue':'transparent' }" 
-             [ngClass]="{'white-text': logItem >= 5}">
-             {{logItem}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Directive Assignment</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ol>
+                    <li>add a button which says 'Display Details'</li>
+                    <li>Add a paragraph which any content of your choice (e.g. 'Secret Password='tuna')</li>
+                    <li>Toggle the displaying of that paragraph with the button created in the first step.</li>
+                    <li>Log all button clicks in an array and output that array below the secret paragraph 
+                        (maybe log a timestamp or simply an incrementing number)</li>
+                    <li>Starting at te 5 th log item,give all future log items a blue backgroundColor (via ngStyle) whitecolor (ngClass)</li>
+                </ol>
+                <!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">Display Details</button> -->
+                <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+                <p *ngIf="showSecret"> I am Mamata Vinayak Yeul. I completed BE computer science from GCOEC.
+                     Secret Password = tuna</p>
+                <div *ngFor="let logItem of log"
+                 [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue':'transparent' }" 
+                 [ngClass]="{'white-text': logItem >= 5}">
+                 {{logItem}}
+                </div>
             </div>
         </div>
     </div>
-</div>
+    
+
+
+
+</body>
+</html>
