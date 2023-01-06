@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,11 +12,10 @@ import { CustdirDirective } from './custdir.directive';
 import { HooksComponent } from './hooks/hooks.component';
 import { DirassignComponent } from './dirassign/dirassign.component';
 import { BindingComponent } from './binding/binding.component';
-// import { SimpleformComponent } from './simpleform/simpleform.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reactive-form-assignment.component';
 import { StructuralDirectiveAssignmentComponent } from './structural-directive-assignment/structural-directive-assignment.component';
-
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
@@ -42,19 +41,13 @@ import { GenderPipe } from './gender.pipe';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RegistrationformComponent } from './registrationform/registrationform.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-
 import { DemopostComponent } from './demopost/demopost.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
 // import { ProductsModule } from './product/products.module';
 // import { OrdersModule } from './orders/orders.module';
 import { AdduserComponent } from './adduser/adduser.component';
 import { RapidapiComponent } from './rapidapi/rapidapi.component';
-
-
-
-
-
-
+import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 
 @NgModule({
   declarations: [
@@ -64,10 +57,11 @@ import { RapidapiComponent } from './rapidapi/rapidapi.component';
     DirectiveComponent,
     NgswitchComponent,
     AttriComponent,
+    CustdirDirective,
     HooksComponent,
     DirassignComponent,
     BindingComponent,
-    // SimpleformComponent,
+    SimpleformComponent,
     ReactiveformComponent,
     ReactiveFormAssignmentComponent,
     StructuralDirectiveAssignmentComponent,
@@ -99,7 +93,8 @@ import { RapidapiComponent } from './rapidapi/rapidapi.component';
     DemopostComponent,
     PostdetailsComponent,
     AdduserComponent,
-RapidapiComponent
+    RapidapiComponent,
+    TemplatedrivenformComponent
  
   ],
   imports: [

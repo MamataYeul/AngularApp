@@ -7,7 +7,6 @@ import { Injectable } from "@angular/core";
 export class RapidapiService {
   url = 'https://yh-finance.p.rapidapi.com/market/v2/get-quotes?region=US';
   constructor(private httpClient: HttpClient) {}
-
   getDataBBFinance() {
     let headers=new HttpHeaders({
       'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com',

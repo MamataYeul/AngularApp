@@ -2,3 +2,13 @@ input.ng-invalid.ng-touched {
     border: 1px solid red;
     box-shadow: 0 0 13px #ff000021;
 }
+body{
+    background-color: rgb(204, 159, 168);
+}
+h2{
+    color: green;
+    text-align: center;
+}
+.container{
+    background-color: #292a7221;
+}

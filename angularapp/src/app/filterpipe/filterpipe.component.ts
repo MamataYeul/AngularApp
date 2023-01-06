@@ -75,4 +75,12 @@ export class FilterpipeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  AddProduct(productname){
+    this.productArr.push({
+      
+      name:productname.value,
+
+    })
+  }
 }

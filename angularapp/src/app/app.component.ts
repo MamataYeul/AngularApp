@@ -34,7 +34,12 @@ export class AppComponent implements OnInit {
     },
   ];
   food: string[] = [];
+  appchildExist:boolean=false;
 
+  Destroy(){
+    this.appchildExist=false;
+
+  }
   ngOnInit(): void {
     this._demoService.getUserData().subscribe((data) => {
       console.log("AppComponent", data);

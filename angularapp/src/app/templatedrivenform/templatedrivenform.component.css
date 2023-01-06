@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(174, 212, 212);
+}
+
+h3{
+    text-align: center;
+    color: rgb(124, 52, 52);
+    box-shadow: 10px 10px 10px green;
+}
+.container{
+  background-color: rgb(109, 109, 173);  
+  border-radius: 75px;
+  padding-top: 10px;
+}
+.row justify-content-center{
+    background-color: brown;
+}

@@ -21,16 +21,8 @@ import {
   templateUrl: "./hooks.component.html",
   styleUrls: ["./hooks.component.css"],
 })
-export class HooksComponent
-  implements
-    OnInit,
-    OnChanges,
-    DoCheck,
-    AfterContentInit,
-    AfterContentChecked,
-    AfterViewInit,
-    AfterViewChecked,
-    OnDestroy
+export class HooksComponent implements OnInit, OnChanges, DoCheck,AfterContentInit,AfterContentChecked,
+AfterViewInit,AfterViewChecked,OnDestroy
 {
   @Input() userid: number;
   @Input() parentData: string;
@@ -51,20 +43,19 @@ export class HooksComponent
   }
   ngAfterViewChecked(): void {
     console.log("LifeCycle Hook ngAfterViewChecked called");
-    this.viewChild.nativeElement.setAttribute(
-      "style",
-      `color:${this.parentData}`
+    this.viewChild.nativeElement.setAttribute("style", `color:${this.parentData}`
     );
     console.log("----------------------------------------------------------------");
   }
   ngAfterViewInit(): void {
     console.log("LifeCycle Hook ngAfterViewInit called", this.viewChild);
-    // this.viewChild.nativeElement.setAttribute('style',  `color:${this.parentData}`);
+    this.viewChild.nativeElement.setAttribute('style',  `color:${this.viewChild}`);
     console.log("----------------------------------------------------------------");
   }
   ngAfterContentChecked(): void {
+    // throw new Error ('Method not implemnted.');
     console.log("LifeCycle Hook ngAfterContentChecked called");
-    // this.contentChild.nativeElement.setAttribute('style', `color:${this.parentData}`);
+    this.contentChild.nativeElement.setAttribute('style', `color:${this.parentData}`);
     console.log("----------------------------------------------------------------");
   }
   ngDoCheck(): void {
@@ -75,12 +66,12 @@ export class HooksComponent
     console.log("view int access", this.viewChild);
     console.log("----------------------------------------------------------------");
     // this.contentChild.nativeElement.setAttribute('style', 'color:green');
-    //this.contentChild.nativeElement.setAttribute('style', `color:${this.parentData}`);
+    // this.contentChild.nativeElement.setAttribute('style', `color:${this.parentData}`);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log("LifeCycle Hook ngOnChanges called");
-    // console.log(this.parentData);
+    console.log(this.parentData);
     for (const propname in changes) {
       const prop = changes[propname];
       const { previousValue, currentValue, firstChange } = prop;
@@ -95,7 +86,11 @@ export class HooksComponent
   //call ngOnInit at once.
   ngOnInit() {
     console.log("HooksComponent ngOnInit called");
-    // api
+    this.counter=setInterval(()=>{
+      this.num=this.num+1;
+      console.log(this.num);
+// api
+    },1000)
     console.log("----------------------------------------------------------------");
   }
 }
