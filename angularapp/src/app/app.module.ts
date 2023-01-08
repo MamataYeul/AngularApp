@@ -48,6 +48,12 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { RapidapiComponent } from './rapidapi/rapidapi.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
+import { MyContainerComponent } from './myContainer/myContainer.component';
+import { TopnavComponent } from './myContainer/topnav/topnav.component';
+import { HeaderComponent } from './myContainer/header/header.component';
+import { Txtsec1Component } from './myContainer/txtsec1/txtsec1.component';
+import { Txtsec2Component } from './myContainer/txtsec2/txtsec2.component';
+import { BindingDataComponent } from './binding-data/binding-data.component';
 
 @NgModule({
   declarations: [
@@ -94,8 +100,14 @@ import { TemplatedrivenformComponent } from './templatedrivenform/templatedriven
     PostdetailsComponent,
     AdduserComponent,
     RapidapiComponent,
-    TemplatedrivenformComponent
- 
+    TemplatedrivenformComponent,
+    MyContainerComponent,
+    TopnavComponent,
+    HeaderComponent,
+    Txtsec1Component,
+    Txtsec2Component,
+    BindingDataComponent
+   
   ],
   imports: [
     BrowserModule,
@@ -105,6 +117,7 @@ import { TemplatedrivenformComponent } from './templatedrivenform/templatedriven
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

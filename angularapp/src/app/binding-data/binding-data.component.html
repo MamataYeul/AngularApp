@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Binding Practice Sheet</title>
+</head>
+
+<body>
+    <h3>One way data binding -String Interpolation</h3>
+    <!-- <p>Binds data component to  html template view.static data as it is came in the view side.
+        But we can make it dynamic by using string Interpolation We can only bind string in the Interpolation data binding.
+   We can use expression also.We can concatanate two string. Also we can used js inbuild mehtods and custom mehtods.
+   We can use ternary operator.
+</p>  -->
+    <div>
+        My name is {{dyname}}<br /><br />
+        The addition of two number 4 and 5 :={{4+5}}<br /><br />
+        {{'Welcome'+dyname}}<br /><br />
+        The length of name Mamata is:- {{dyname.length}}<br /><br />
+        JS In build Property:{{dyname.toUpperCase()}}<br /><br />
+        Custom method:-{{myMethod()}}<br /><br />
+        My App status is {{appStatus? 'Online':'Ofline'}}.<br /><br />
+        My App status is {{appStatus? status1:status2}}.
+    </div>
+    <h3> One way data binding-Property Binding</h3>
+    <input type="text" name="" id="" [value]="dyname"><br /><br />
+    <input type="text" name="" id="" bind-value="dyname"><br /><br />
+    <!-- We can also bind other attributes by giving bind-name like in this way -->
+    <input type="text" name="" id="" [value]="dyname" hidden><br /><br />
+    <!-- We use here hidden attribute so that input text hidden in our page but taking space. -->
+    <input type="text" name="" id="" [value]="dyname" [disabled]="enable"><br /><br />
+    <input type="text" name="" id="" bind-value="dyname" [hidden]="!enable">
+    <h3>Class and Style Binding</h3>
+    <!-- <div class="box" [class.myclass]="mypro">Class Binding</div>
+    <div class="box" [style.margin]= "isActive?   myStyle1:'5px'">Style Binding</div> -->
+    <div class="box" [ngStyle]="mltStyle">Style Binding Multiple properties</div>
+    For multiple element we can give 
+
+    <h3>One way data binding-Event Binding</h3>
+    <button (click)="onAddCart()">Add to Cart</button>
+    <p>{{msg}}</p>
+    <input type="text" value="myinputtext" (click)="onInputClick($event)">
+<!-- (mouseup)="myMethod()"
+     (mousedown)="myMethod()"
+     (click)="myMethod()"
+     (dblclick)="myMethod()"
+     (drag)="myMethod()"
+     (dragover)="myMethod()"
+     (drop)="myMethod()" -->
+
+    <h3>Two way data binding[(ngModel)]</h3>
+
+</body>
+
+</html>
