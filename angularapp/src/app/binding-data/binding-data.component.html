@@ -6,14 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Binding Practice Sheet</title>
 </head>
-
 <body>
     <h3>One way data binding -String Interpolation</h3>
-    <!-- <p>Binds data component to  html template view.static data as it is came in the view side.
-        But we can make it dynamic by using string Interpolation We can only bind string in the Interpolation data binding.
-   We can use expression also.We can concatanate two string. Also we can used js inbuild mehtods and custom mehtods.
-   We can use ternary operator.
-</p>  -->
     <div>
         My name is {{dyname}}<br /><br />
         The addition of two number 4 and 5 :={{4+5}}<br /><br />
@@ -24,6 +18,7 @@
         My App status is {{appStatus? 'Online':'Ofline'}}.<br /><br />
         My App status is {{appStatus? status1:status2}}.
     </div>
+    <hr>
     <h3> One way data binding-Property Binding</h3>
     <input type="text" name="" id="" [value]="dyname"><br /><br />
     <input type="text" name="" id="" bind-value="dyname"><br /><br />
@@ -32,26 +27,33 @@
     <!-- We use here hidden attribute so that input text hidden in our page but taking space. -->
     <input type="text" name="" id="" [value]="dyname" [disabled]="enable"><br /><br />
     <input type="text" name="" id="" bind-value="dyname" [hidden]="!enable">
+    <hr>
     <h3>Class and Style Binding</h3>
     <!-- <div class="box" [class.myclass]="mypro">Class Binding</div>
     <div class="box" [style.margin]= "isActive?   myStyle1:'5px'">Style Binding</div> -->
-    <div class="box" [ngStyle]="mltStyle">Style Binding Multiple properties</div>
-    For multiple element we can give 
-
+    <div class="box" [ngStyle]="mltStyle">ngStyle is a directive Binding Multiple properties</div>
+   <!-- We can bind the data by using ngStyle and ngClass directive For multiple element.  -->
+   <hr>
     <h3>One way data binding-Event Binding</h3>
-    <button (click)="onAddCart()">Add to Cart</button>
+    <button (click)="onAddCart()" class="btn btn-primary">Add to Cart</button><br/><br/>
+    <input type="text" value="myinputtext" (click)="onInputClick($event)" ><br/><br/>
+    <button value="TV" (click)="onAddCart($event)"  class="btn btn-success">TV</button><br/><br/>
+    <button value="laptop"  (click)="onAddCart($event)" class="btn btn-danger">Laptop</button><br/><br/>
+    <button value="Washing Machine"  (click)="onAddCart($event)"  class="btn btn-primary">Washing Machine</button><br/><br/>
     <p>{{msg}}</p>
-    <input type="text" value="myinputtext" (click)="onInputClick($event)">
-<!-- (mouseup)="myMethod()"
-     (mousedown)="myMethod()"
-     (click)="myMethod()"
-     (dblclick)="myMethod()"
-     (drag)="myMethod()"
-     (dragover)="myMethod()"
-     (drop)="myMethod()" -->
-
+<!-- Template refernce Variable or local refernce variable -->
+<input #inputInfo type="text" value="My name is" name="Sejal">
+<button (click)="getInputInfo(inputInfo)">Get Info</button>
+<hr>
     <h3>Two way data binding[(ngModel)]</h3>
-
+<input type="text"  [(ngModel)]='userName'>
+{{userName}}<br/><br/>
+<input type="text"  [(ngModel)]="productName">
+{{productName}}<br/><br/>
+<input type="text" [(ngModel)]="vegetableName">
+{{vegetableName}}<br/><br/>
+<input type="text" [(ngModel)]="courseName" >
+{{courseName}}<br/><br/>
 </body>
 
 </html>

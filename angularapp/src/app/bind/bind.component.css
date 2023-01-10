@@ -1,0 +1,10 @@
+h3{
+    color: brown;
+    text-align: center;
+}
+.box{
+    border: 5px solid blueviolet;
+    width: 50%;
+    margin: auto;
+    padding:2%;
+}

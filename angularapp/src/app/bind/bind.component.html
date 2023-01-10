@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h3>Assignment No:2 Data Binding Concepts</h3>
+    <hr>
+    <ol>
+        <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
+        <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
+        <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+        <li>Upon clicking the button, the username should be reset to an empty string</li>
+    </ol>
+    <hr>
+    
+    <div class="box">
+        <h3>Login Details:</h3>
+        <hr>
+        <h4>User Can login by using following credentials</h4>
+        <label for="UserName">Enter User Name:
+        <input type="text" value="userName" [(ngModel)]="userName"></label><br/>
+        <!-- [(ngModel)] combination of property and event binding:banana in a box two way data binding -->
+        <label for="UserName">Enter User Name: {{userName}} </label>  <br/>
+
+        <!-- String Interpolation :We can bind string value only by interpolation-->
+        <label for="password">Password: <input type="password" [(ngModel)]="password">
+            <!-- <label for="password">{{password}}</label> -->
+        </label><br/>
+
+        <label for="education" >Education:
+            <input type="text" name="" id="" [(ngModel)]="education">
+        </label><br/>
+        <hr>
+    <button  class="btn btn-success"  (click)="OnClick()" >Reset</button>
+    </div>
+
+    <hr>
+
+    <!-- <form name="form1">
+        Enter Name:<input type="text" name="name" size="15">
+        <br>
+        Enter Phone:<input type="number" name="phone" range="10">
+        <br><br>
+        <input type="reset" name="resetbutton" value="Reset" onClick='console.log("The reset button was click")'>
+    </form> -->
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

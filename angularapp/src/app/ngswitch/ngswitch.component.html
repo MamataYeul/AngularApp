@@ -24,3 +24,41 @@
 </div>
 <hr>
 
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="container">
+    <div class="col-md-4">
+        <select class="form-control" (change)="getItemValue($event)">
+            <option value="default">Select Items</option>
+            <option value="Oranges">Oranges</option>
+            <option value="Banana">Banana</option>
+             <option value="Grapes">Grapes</option>
+              <option value="Ginger">Ginger</option>
+               <option value="Onion">Onion</option>
+                <option value="Bag">Bag</option>
+                 <option value="Briefcase">Briefcase</option>
+                  <option value="Suitcase">Suitcase</option>
+                   <option value="Lemon">Lemon</option>
+                    <option value="Bed">Bed</option>
+                    <option value="Laptop">Laptop</option> 
+                    <option value="TV">TV</option>
+                     <option value="LED">LED</option>
+        </select>
+    </div>
+    <div class="col-md-4" [ngSwitch]="selectedProduct">
+        <h2 class="text-success" *ngSwitchDefault>Please Select Items</h2>
+        <h2 class="text-success" *ngSwitchCase=" 'Oranges' ">Oranges</h2>
+        <h2 class="text-success" *ngSwitchCase=" 'Banana' ">Banana</h2>
+        <h2 class="text-success" *ngSwitchCase="'Grapes'">Grapes</h2>
+        <h2 class="text-success" *ngSwitchCase="'Ginger'">Ginger</h2>
+        <h2 class="text-success" *ngSwitchCase="'Onion' ">Onion</h2>
+        <h2 class="text-success" *ngSwitchCase="'Bag'">Bag</h2>
+        <h2 class="text-success" *ngSwitchCase="'Briefcase'">Briefcase</h2>
+        <h2 class="text-success" *ngSwitchCase="'Suitcase'">Suitcase</h2>
+        <h2 class="text-success" *ngSwitchCase="'Lemon'">Lemon</h2>
+        <h2 class="text-success" *ngSwitchCase="'Bed'">Bed</h2>
+        <h2 class="text-success" *ngSwitchCase="'Laptop'">Laptop</h2>
+        <h2 class="text-success" *ngSwitchCase="'TV'">TV</h2>
+        <h2 class="text-success" *ngSwitchCase=" 'LED'">LED</h2>
+    </div>
+</div>
+

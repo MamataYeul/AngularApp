@@ -3,7 +3,6 @@ import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
@@ -12,6 +11,7 @@ import { CustdirDirective } from './custdir.directive';
 import { HooksComponent } from './hooks/hooks.component';
 import { DirassignComponent } from './dirassign/dirassign.component';
 import { BindingComponent } from './binding/binding.component';
+import { BindComponent } from './bind/bind.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reactive-form-assignment.component';
@@ -54,11 +54,15 @@ import { HeaderComponent } from './myContainer/header/header.component';
 import { Txtsec1Component } from './myContainer/txtsec1/txtsec1.component';
 import { Txtsec2Component } from './myContainer/txtsec2/txtsec2.component';
 import { BindingDataComponent } from './binding-data/binding-data.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgForComponent } from './ng-for/ng-for.component';
+import { NgIfComponent } from './ng-if/ng-if.component';
+import { CompassignComponent } from './compassign/compassign.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
+    
     ServersComponent,
     DirectiveComponent,
     NgswitchComponent,
@@ -67,6 +71,7 @@ import { BindingDataComponent } from './binding-data/binding-data.component';
     HooksComponent,
     DirassignComponent,
     BindingComponent,
+    BindComponent,
     SimpleformComponent,
     ReactiveformComponent,
     ReactiveFormAssignmentComponent,
@@ -106,7 +111,10 @@ import { BindingDataComponent } from './binding-data/binding-data.component';
     HeaderComponent,
     Txtsec1Component,
     Txtsec2Component,
-    BindingDataComponent
+    BindingDataComponent,
+    NgForComponent,
+    NgIfComponent,
+    CompassignComponent
    
   ],
   imports: [
@@ -117,6 +125,7 @@ import { BindingDataComponent } from './binding-data/binding-data.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   
   ],
   providers: [],

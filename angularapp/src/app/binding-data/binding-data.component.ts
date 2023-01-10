@@ -32,15 +32,18 @@ export class BindingDataComponent implements OnInit {
     'border':'10px solid green'
 }
 msg:string= "";
-onAddCart(){
-  this.msg="Product Added in Cart";
+onAddCart(event){
+  this.msg= event.target.value +" Added in Cart";
 }
 onInputClick(event){
   console.log(event.target.value);
-  
-
 }
-
-
-
+getInputInfo(inputInfo){
+ console.log(inputInfo.name);
+  
+}
+userName:string='two way binding works!';
+productName:string='Mango';
+vegetableName:string='Brinjal';
+courseName:string='Angular';
 }
