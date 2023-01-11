@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: "gallery", component: GalleryComponent }, //localhost:4200//gallery
   { path: "post", component: DemopostComponent },
   { path: "postdetails/:id", component: PostdetailsComponent },
-  {path:'adduser',component:AdduserComponent,canDeactivate:[UnSavedChangesGuard]},
+  { path:'adduser',component:AdduserComponent,canDeactivate:[UnSavedChangesGuard]},
   { path: "product",canActivate:[AuthGuard], loadChildren: "./product/products.module#ProductsModule" }, //syntax of lazy loading approach
   { path: "orders", loadChildren: "./orders/orders.module#OrdersModule" },
   { path: "**", component: PagenotfoundComponent },

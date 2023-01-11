@@ -1,1 +1,102 @@
-<p>orderlist works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Child Component Communication(Decorators)</title>
+</head>
+
+<body>
+    <!-- parent component code -->
+    <div class="text-center">
+        <h3>Parent Child Component Communication(Decorators)</h3>
+        <h3>Buy Products</h3>
+    </div>
+    <div class="alert alert-light border d-flex align-items-center" *ngIf="addedProduct">
+        <strong class="text-info">Laptop </strong>&nbsp; is selected and added in cart.
+        <button class="btn btn-success ml-auto">Check Out</button>
+    </div>
+    <hr class="mb-3">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop</h5>
+                    <img src="assets/images/laptop.jpg">
+                    <p class="card-text">
+
+                        Key Features:-
+                        Memory and storage: 8GB and 512GB SSD HDD capacity
+                        Processor: Intel Core i3-1115G4
+                        Operating System: Pre-loaded Windows 11
+                        Display: 15.6 Inches screen with 1920 x 1080 Pixels resolution
+                        Weight: 1.69 Kg
+                        Warranty: 1 Year from the manufacturer from the date of purchase
+                    </p>
+                    <button class="btn btn-primary" (click)="onSelectProduct('Laptop')">Select this Product</button>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Mobile</h5>
+                    <img src="assets/images/mobile.png">
+                    <p class="card-text">Memory, Storage & SIM: 6GB RAM | 128GB internal memory expandable up to 256GB |
+                        Dual SIM (nano+nano) dual-standby (4G+4G)
+                        Android Pie v9.0 based on ColorOS 6.1 operating system with 2.3GHz Mediatek 6765 octa core
+                        processor, IMG GE8320
+                    </p>
+                    <button class="btn btn-primary" (click)="onSelectProduct('Mobile')">Select this Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Television</h5>
+                    <img src="assets/images/tv.jpg">
+                    <p class="card-text">
+                        Key Features
+                        80 cm (32 inch) HD Ready Display
+                        Android TV with 5000 plus Apps
+                        PatchWall Experience
+                        Bezel-less Desig </p>
+                    <button class="btn btn-primary" (click)="onSelectProduct('Television')">Select this Product</button>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Washing Machine</h5>
+                    <p class="card-text">
+                        <img src="assets/images/washmachine.png">
+
+                        No Cost EMI starts from ₹ 3708.33/ month.
+                        Standard EMI starts from ₹ 2428.90/ month.
+                        EMI also available on Debit cards
+                    </p>
+                    <button class="btn btn-primary" (click)="onSelectProduct('Washing Machine')">Select this
+                        Product</button>
+                </div>
+            </div>
+        </div>
+        <br />
+        <hr>
+        <!-- child component coding -->
+        <div class="col-md-12 bg-success text-white text-center py-4">
+            <h2 *ngIf="!productSelected">Please Select any product</h2>
+            <h2 *ngIf="productSelected">{{selectedProduct}} is selected</h2>
+            <button class="btn btn-light" (click)="onAddProduct()">Add to cart</button>
+        </div>
+    </div>
+</body>
+</html>

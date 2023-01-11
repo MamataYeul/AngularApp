@@ -11,5 +11,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+  statusOnline:boolean=false;
+  products=[
+    {name:'Laptop'},
+    {name:'Mobile'},
+    {name:'TV'},
+    {name:'Washing Machine'}
+  ]
 
 }

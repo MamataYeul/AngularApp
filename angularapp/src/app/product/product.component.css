@@ -12,6 +12,7 @@
     display:inline-block;
     margin: 0 10px 10px ;
     width: 45%;
-   
-    
+}
+body{
+    background-image: url('/assets/images/angular.png');
 }

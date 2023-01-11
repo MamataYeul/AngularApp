@@ -44,10 +44,17 @@
                     <td>Agile and JIRA Methodology</td>
                     <td>1 Week</td>
                 </tr>
-
             </tbody>
         </table>
     </div>
-    < </body>
-
+     <!-- <app-ng-for></app-ng-for>  -->
+<hr>
+     <div class="products">
+        <ng-container *ngIf="statusOnline">
+            <div *ngFor="let proitem of products">
+                {{proitem.name}}
+            </div>
+        </ng-container>
+     </div>
+    </body>
 </html>

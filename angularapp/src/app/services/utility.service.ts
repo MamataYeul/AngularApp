@@ -15,5 +15,8 @@ export class UtilityService{
     emp_company:'Wipro'
    }
    constructor(){} 
+   messageAlert(){
+    alert("Thanks for subscribe.")
+   }
 
 }

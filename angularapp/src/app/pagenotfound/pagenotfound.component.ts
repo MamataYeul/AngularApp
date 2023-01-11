@@ -14,6 +14,7 @@ export class PagenotfoundComponent implements OnInit {
   btnClick(){
     
     
+    
   }
 
 }
