@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment On Pipe Directive</title>
+</head>
+<body>
+    <h3 >Built -in Pipes(Pre-defined Pipes)</h3>
+    <div class="container-md">
+         <!-- Adding Paramenter -->
+        Today's Date:-{{presentDate}}
+       
+       <div>
+        <h3>Date Pipe:</h3>  <hr>
+        Today's Date:-{{presentDate| date}}<br>
+        <!-- adding parameters in date -->
+        Today's Date(shortDate):-{{presentDate|date:'shortDate'}}<br>
+        Today's Date(fullDate):-{{presentDate|date:'fullDate'}}<br>
+        Today's Date(mediumDate):-{{presentDate|date:'mediumDate'}}<br>
+        Today's Date(FormattedDate):-{{presentDate|date:'dd/MM/yyyy'}}<br>
+        Today's Date(Hours and minutes):-{{presentDate|date:'h:mm'}}<br>
+        <h3>Async Pipes</h3>
+        Second Changing in Time:{{timeChanges|async}}<br>
+        <h3>Currency Pipes</h3>
+        <div style="text-align: center">
+           <p>Currency in Europe:{{price|currency:'EUR':true}}</p>
+           <p>Currency in America:{{price|currency:'USD':true}}</p>
+           <p>Currency in Indian Ruppees:{{price|currency:'INR':true}}</p>
+        </div>
+        <h3>Slice Pipe</h3>
+        <div>
+            <p>Start Index:-{{Fruits|slice:2}}</p>
+            <p>Start and end Index:-{{Fruits|slice:1:4}}</p>
+            <p>Negative Index:-{{Fruits|slice:-2}}</p>
+            <p>Negative Start and end index:-{{Fruits|slice:-4:-2}}</p>
+        </div>
+        <hr>
+        <h3>Decimal Pipe</h3>
+        <p>{{decimalNum1|number}}</p>
+        <p>{{decimalNum2|number}}</p>
+        <h3>Apply Formatting</h3>
+        <p>Apply Formatting:-{{decimalNum1|number:'3.1'}}</p>
+        <p>Apply Formatting:-{{decimalNum1|number:'2.1-4'}}</p>
+        <h3>Percent Pipe</h3>
+        <p>{{decimalNum3|percent:'2.2'}}</p>
+        <h3>Json Pipe</h3>
+        <p ngNonBindable>{{jsonData}}</p>
+        <p>{{jsonData}}</p>
+        <p ngNonBindable>{{jsonData|json}}</p>
+        <p>{{jsonData|json}}</p>
+
+    </div>
+    </div>
+    <hr>
+    <h3>Chained Pipes</h3>
+    <div class="container-md">
+        Date with Uppercase(fullDate):{{presentDate|date:'fullDate'|uppercase}}<br>
+        Date with Lowerrcase(fullDate):{{presentDate|date:'fullDate'|lowercase}}<br>
+        Date with Lowerrcase(mediumDate):{{presentDate|date:'mediumDate'|lowercase}}<br>
+    </div>
+    <hr>
+    <h3>Custom Pipes</h3>
+    <div class="container-md">
+        
+
+    </div>
+    <hr>
+    <h3>Pure And Impure Pipe</h3>
+    <div class="container-md">
+
+    </div>
+    
+</body>
+</html>

@@ -61,6 +61,8 @@ import { CompassignComponent } from './compassign/compassign.component';
 import { UtilityService } from './services/utility.service';
 import { HookparentComponent } from './hookparent/hookparent.component';
 import { HookchildComponent } from './hookchild/hookchild.component';
+import { PipeassignmentPipe } from './pipeassignment.pipe';
+import { PipeassignmentComponent } from './pipeassignment/pipeassignment.component';
 
 @NgModule({
   declarations: [
@@ -119,7 +121,9 @@ import { HookchildComponent } from './hookchild/hookchild.component';
     NgIfComponent,
     CompassignComponent,
     HookparentComponent,
-    HookchildComponent
+    HookchildComponent,
+    PipeassignmentPipe,
+    PipeassignmentComponent
    
   ],
   imports: [

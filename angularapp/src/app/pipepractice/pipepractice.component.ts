@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { pairs } from 'rxjs';
+
 
 @Component({
   selector: 'app-pipepractice',
