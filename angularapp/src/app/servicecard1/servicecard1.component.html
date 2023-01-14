@@ -15,7 +15,20 @@
           <button (click)="btnClick()"  class="btn btn-primary">Subscribe</button>
         </div>
     </div>
+    <hr>
+    <div class="card">
+        <div class="card-body text-align-center">
+            <ng-container *ngFor="let emp of employee" >
+                User Name:<strong>{{emp.username}}</strong>
+                User Id:<strong>{{emp.id}}</strong>
+                Company Title:<strong>{{emp.title}}</strong>
+                Status:<strong>{{emp.status}}</strong><br>
 
-   
+            </ng-container>
+        </div>
+    </div>
+    <div>
+        <h2 class="card-title">{{product}}</h2>
+    </div>
 </body>
 </html>

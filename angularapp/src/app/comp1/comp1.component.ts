@@ -21,8 +21,11 @@ userName;
 
   updateUserName(uname){
     let emp={
-      name:'Dnyanesh',
-      id:'101'
+      name:'Mamata',
+      id:'101',
+      designation:'UI Developer',
+      salary:'29000',
+      isMarried:'Yes'
     }
     console.log(uname.value);
     //next method is used to send message to an observable i.e username

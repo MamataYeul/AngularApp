@@ -22,8 +22,8 @@ export class Comp4Component implements OnInit {
     this._utilityService.userName.next(uname.value);
     
   }
-  // updateEmpDetail(emp){
-  //   console.log(emp.value);
-  //   this._utilityService.emp_obj.next(emp.value);
-  // }
+  updateEmpDetail(emp){
+    console.log(emp.value);
+    this._utilityService.userName.next(JSON.stringify(emp));
+  }
 }

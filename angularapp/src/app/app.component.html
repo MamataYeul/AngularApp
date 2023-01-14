@@ -49,12 +49,12 @@
     <button class="btn btn-primary" (click)="updateProduct()">Update Product</button>
     <app-hooks *ngIf="appchildExist" [userid]="uid" [parentData]="data" >
       <h1 #child>This is child content coming from parent component</h1>
-
     </app-hooks>
   </div>
 </div>
 <button class="btn btn-danger" (click)="Destroy()">Destroy Component</button> -->
 
+<app-hookparent></app-hookparent>
 <!-- <app-dirassign></app-dirassign> -->
 <!-- <app-simpleform></app-simpleform> -->
 <!-- <app-registrationform></app-registrationform> -->
@@ -102,5 +102,6 @@
 <!-- <app-bind></app-bind> -->
 <!-- <app-ng-if></app-ng-if> -->
 <!-- <app-ng-for></app-ng-for> -->
-<app-servicecontact></app-servicecontact>
+<!-- <app-servicecontact></app-servicecontact> -->
+
  <!-- <router-outlet></router-outlet> -->

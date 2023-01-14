@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <div class="alert alert-info">
+    <h2 class="alert alert-success" text-align: center>This is hookParent Component</h2>
+        <button class="btn btn-primary" (click)="updateUser()">Update</button>&nbsp;
+        <button  class="btn btn-danger" (click)="destroy()">Destroy Child</button>
+        <hr>
+        <app-hookchild  *ngIf="!isChildDestroyed" [userName]="userName">
+            <div #contentWrapper>Foo</div>
+        </app-hookchild>
+     
+    </div>
+    <div *ngIf="isChildDestroyed">Child component is destroyed!:( </div> 
+  </body>
+</html>
+
+

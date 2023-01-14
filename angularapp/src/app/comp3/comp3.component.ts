@@ -15,9 +15,18 @@ export class Comp3Component implements OnInit {
 
   ngOnInit() {
   }
+
   updateUserName(uname){
+
+    let user={
+      name:'Mohit',
+      salary:50000,
+      profile:'Developer',
+      id:'105'
+    }
     console.log(uname.value);
-    this._utilityService.userName.next(uname.value);
+    // this._utilityService.userName.next(uname.value);
+    this._utilityService.userName.next(JSON.stringify(user));
     
   }
 

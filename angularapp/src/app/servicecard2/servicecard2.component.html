@@ -15,6 +15,17 @@
           <button (click)="btnClick()" class="btn btn-primary">Subscribe</button>
         </div>
     </div>
-    
+   <div class="card">
+        <div class="card-body text-align-center">
+            <ng-container *ngFor="let product of products" >
+                Product Name:<strong>{{product.name}}</strong>
+                Product Id:<strong>{{product.id}}</strong><br/>
+            </ng-container>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="card-title">{{product}}</h2>
+    </div>
 </body>
 </html>
