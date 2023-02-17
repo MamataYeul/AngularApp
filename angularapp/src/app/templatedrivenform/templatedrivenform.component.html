@@ -1,124 +1,53 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template driven Form</title>
+    <title>Template Driven Form</title>
 </head>
 <body>
-    
-    <div class="container">
-        <h3>Student Registration Form: Simple Template Driven Form</h3>
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-left rounded shadow py-5">
-                <form>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Student Name:</label>
-                        <input type="email" class="form-control" id="name" placeholder="Enter Name">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="Email" placeholder="Enter Email">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputdateofbirth">Date Of Birth:</label>
-                            <input type="date" min='2023-01-05' class="form-control" id="dateofbirth" placeholder="Enter date of birth">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Mobile Number:</label>
-                            <input type="email" class="form-control" id="mobile number" placeholder="Enter Mobile Number">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Gender:</label>
-                            <input type="radio" >Male <input type="radio" >Female
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">School/College</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Govt College Of Engg.Chandrapur">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">Department</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Bachelor Of Engg.">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">Course</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="eg.BE(CSE)">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress2">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2"
-                            placeholder="Apartment, studio, or floor">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="inputCity">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">State</label>
-                            <input type="text" class="form-control" id="inputCity">
-                        </div>
-
-                        <div class="form-group col-md-4">
-                            <label for="inputState">Country</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>India</option>
-                                <option>UK</option>
-                                <option>US</option>
-
-                            </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="inputZip">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
-                                Check me out
-                            </label>
-                        </div>
-                    </div>
-                   <span> <button type="submit" class="btn btn-primary" (click)="OnSubmit()">Submit</button></span> 
-                    <button type="reset" class="btn btn-danger"(click)="OnReset()">Reset</button>
-          <div class="row justify-content-center mt-4">
-            <div class="col-md- rounded shadow py-4">
-                <h2>Form Data</h2>
-                <p>Name:<strong>{{student.name}}</strong></p>
-                <p>Email:<strong>{{student.email}}</strong></p>
-                <p>Date Of Birth:<strong>{{student.dob}}</strong></p>
-                <p>Moble Number:<strong>{{student.mobile number}}</strong></p>
-                <p>Gender:<strong>{{student.gender}}</strong></p>
-                <p>School/College:<strong>{{student.school/college}}</strong></p>
-                <p>Department:<strong>{{stdent.department}}</strong></p>
-                <p>Course:<strong>{{student.course}}</strong></p>
-                <p>Address1:<strong>{{sudent.address1}}</strong></p>
-                <p>Address2:<strong>{{student.address2}}</strong></p>
-                <p>City:<strong>{{student.city}}</strong></p>
-                <p>State:<strong>{{student.state}}</strong></p>
-                <p>Country:<strong>{{student.country}}</strong></p>
-                <p>Pin:<strong>{{student.pin}}</strong></p>
-                
-
+    <div class="container-fluid">
+        <h1>Bootcamp Enrollment Form</h1>
+        <form>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control">
             </div>
-
-          </div>
-            </form>
-        </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" class="form-control">
+            </div>
+            <div class="form-group">
+                <select class="custom-select">
+                    <option selected>I am interested in </option>
+                    <option *ngFor="let topic of topics">{{topic}}</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>Time Preference</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="timePreference" value="morning">
+                    <label class="form-check-label">Morning(9AM - 12AM)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="timePreference" value="morning">
+                    <label class="form-check-label">Evening(5PM - 8PM)</label>
+                </div>
+            </div>
+            <div class="form-check-mb-3">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">
+                    Send me Promotional Offers
+                </label><br>
+                <button class="btn btn-primary" type="submit">Submit Form</button>
+                
+            </div>
+        </form>
     </div>
-    </div>
-
 </body>
-
-</html> -->
+</html>

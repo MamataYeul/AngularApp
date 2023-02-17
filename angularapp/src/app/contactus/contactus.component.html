@@ -1,26 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
 </head>
+<!-- filter pipe practice -->
 <body>
-    <header>Contact Us</header>
-    
-    <form class="form-control">
-        <div class="bg-success p-2 text-white bg-opacity-75">
-            <label for="fullname">Full Name:</label>
-            <input type="text" placeholder="Enter Your name"><br/>
-            <label for="email">Email</label>
-            <input type="text" placeholder="Enter Your Email"><br/>
-            <label for="messge">Message</label>
-            <input type="text">
+    <div class="page-area">
+        <h3 class="row justify-content-center">Contact Us</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-8 form-inline mb-2">
+                <input type="text" class="form-control" placeholder="Add Product" #add>
+                <button class="btn btn-success ml-2" (click)="onAddProduct()">Add Product</button>
+            </div>
+            <div class="col-md-8">
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="search"
+                    placeholder="search product by name" [(ngModel)]="namesearch">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Sr No.</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Product Price</th>
+                                <th scope="col">Availability</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let product of productArr | filter:namesearch">
+                                <th scope="col">{{product.sno}}</th>
+                                <td>{{product.name}}</td>
+                                <td>{{product.price}}</td>
+                                <td><span class="badge text-bg-primary">{{product.availability}}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </form>
-    
-</body>
-</html>
+    </div>
 
+</body>
+
+</html>

@@ -19,7 +19,17 @@ export class PipeassignmentComponent implements OnInit {
   decimalNum3:number=0.8178;
   number:'{minimunIntegerDigits}.{minimumFractionDigits}-{maximumFractionDigits}'
   jsonData={id:'01',name:{username:'Mamata'}};
-  name:'digitcount';
+  digit=100;digit1=10;digit2=1000;
+  value='This is an Angular framework 8 series';
+  nameArr=[
+    'Mamata Yeul',
+    'Gajanan Kharat',
+    'Subhash',
+    'Sommayya',
+    'Ali Navab',
+    'Chaya Kadam',
+    'Mrunmayee Deshpande'
+  ]
   constructor() { }
 
   ngOnInit() {

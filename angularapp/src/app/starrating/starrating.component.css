@@ -1,0 +1,8 @@
+nav{
+    background-color: rgb(130, 199, 176);
+    color: black;
+    border-bottom: 1px solid black;
+  }
+  .btn-close{
+    color: red;
+  }

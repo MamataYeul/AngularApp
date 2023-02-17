@@ -17,6 +17,7 @@ export class SimpleformComponent implements OnInit {
     {id:'1', value:'Male'},
     {id:'2', value:'Female'}
   ]
+  dob:number;
   constructor() { }
 
   ngOnInit() {
@@ -27,6 +28,7 @@ export class SimpleformComponent implements OnInit {
     this.employee .username = form.value.userDetails.username;
     this.employee .email = form.value.userDetails.email;
     this.employee.gender = form.value.gender;
+    this.employee.dob=form.value.dob;
     form.reset();
     form.controls['course'].setValue('Angular');
     form.controls['gender'].setValue('Female');

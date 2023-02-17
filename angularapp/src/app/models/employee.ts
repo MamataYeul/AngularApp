@@ -3,4 +3,5 @@ export class Employee{
     username:string;
     email:string;
     gender:string;
+    dob:number;
 }

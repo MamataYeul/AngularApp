@@ -63,6 +63,13 @@ import { HookparentComponent } from './hookparent/hookparent.component';
 import { HookchildComponent } from './hookchild/hookchild.component';
 import { PipeassignmentPipe } from './pipeassignment.pipe';
 import { PipeassignmentComponent } from './pipeassignment/pipeassignment.component';
+import { SqrtPipe } from './sqrt.pipe';
+import { UxtrendzPipe } from './uxtrendz.pipe';
+import { RatingandreviewpopupComponent } from './ratingandreviewpopup/ratingandreviewpopup.component';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbRating } from '@ng-bootstrap/ng-bootstrap/rating/rating';
+import { CrudComponent } from './crud/crud.component';
 
 @NgModule({
   declarations: [
@@ -99,7 +106,6 @@ import { PipeassignmentComponent } from './pipeassignment/pipeassignment.compone
     ServicecontactComponent,
     AboutusComponent,
     ContactusComponent,
-  
     HomeComponent,
     LoginComponent,
     GenderPipe,
@@ -123,7 +129,11 @@ import { PipeassignmentComponent } from './pipeassignment/pipeassignment.compone
     HookparentComponent,
     HookchildComponent,
     PipeassignmentPipe,
-    PipeassignmentComponent
+    PipeassignmentComponent,
+    SqrtPipe,
+    UxtrendzPipe,
+    RatingandreviewpopupComponent,
+    CrudComponent
    
   ],
   imports: [
@@ -135,6 +145,9 @@ import { PipeassignmentComponent } from './pipeassignment/pipeassignment.compone
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgxStarRatingModule,
+    NgbModule,
+    NgbRating
   
   ],
   providers: [UtilityService],

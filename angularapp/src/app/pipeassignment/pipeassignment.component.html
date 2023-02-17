@@ -63,12 +63,28 @@
     <hr>
     <h3>Custom Pipes</h3>
     <div class="container-md">
-        
-
+        <p>DigitCount Pipe</p>
+        <p>The digit of 100:-{{digit|digitCount}}</p>
+        <p>The digit of 10:-{{digit1|digitCount}}</p>
+        <p>The digit of 1000:-{{digit2|digitCount}}</p>
+<hr>
+        <b>Square root of 25 is:{{25|sqrt}}</b><br>
+        <b>Square root of 36 is:{{36|sqrt}}</b><br>
+        <b>Square root of 400 is:{{400|sqrt}}</b><br>
+        <b>Square root of 625 is:{{625|sqrt}}</b><br>
+        <b>Square root of 225 is:{{225|sqrt}}</b><br>
+        <hr>
+        <h3>{{value|uxtrendz:16}}</h3>
+        <ul>
+            <li *ngFor="let name of nameArr">
+            {{name|uxtrendz:10}}
+        </li>
+        </ul>
     </div>
     <hr>
     <h3>Pure And Impure Pipe</h3>
     <div class="container-md">
+        
 
     </div>
     

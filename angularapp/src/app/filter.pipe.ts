@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  // pure:false
+  // we use for our instance change in added value but 
+  //we can used mostly pure pipe and by defaut in is truewe can set it manually by giving false value.
 })
 export class FilterPipe implements PipeTransform {
 
@@ -10,7 +13,7 @@ export class FilterPipe implements PipeTransform {
       return value;
     }
     return value.filter(function(search) {
-      return search.name.toLowerCase().indexOf(searchTearm.toLowerCase()) > -1
+      return search.name.toLowerCase().indexOf(searchTearm.toLowerCase())> -1
       
     });
   }

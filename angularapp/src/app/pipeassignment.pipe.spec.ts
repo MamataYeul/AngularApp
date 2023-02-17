@@ -1,4 +1,4 @@
-import { PipeassignmentPipe } from './pipeassignment.pipe';
+import { PipeassignmentPipe } from './digitcount.pipe';
 
 describe('PipeassignmentPipe', () => {
   it('create an instance', () => {

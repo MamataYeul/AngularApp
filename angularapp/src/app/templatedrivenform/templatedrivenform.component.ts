@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-templatedrivenform',
@@ -10,11 +11,7 @@ export class TemplatedrivenformComponent implements OnInit {
   submitted:boolean=false;
   // student=new Student();
   gender:string;
-  genders = [
-    {id:'1', value:'Male'},
-    {id:'2', value:'Female'}
-  ]
-  
+  topics=['Angular','React','Vue']
   constructor() { }
 
   ngOnInit() {
@@ -37,18 +34,7 @@ export class TemplatedrivenformComponent implements OnInit {
   }
   OnSubmit(form:NgForm){
     this.submitted = true;
-    // this.student.name=form.value.name;
-    // this.student.email = form.value.email;
-    // this.student.dob = form.value.userDetails.dob;
-    // this.student.mobile = form.value.userDetails.mobile;
-    // this.student.gender = form.value.gender;
-    // this.student.department=form.value.department;
-    // this.student.course=form.value.course;
-    // this.student.city=form.value.city;
-    // this.student.state=form.value.state;
-    // this.student.country=form.value.country;
-    // this.student.pin=form.value.pin;
-
+  
     form.reset();
 
   }

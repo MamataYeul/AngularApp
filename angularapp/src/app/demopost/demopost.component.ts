@@ -17,8 +17,6 @@ arrPosts:Post[]=[];
     this._postservice.getPosts().subscribe(res=>{
       this.arrPosts =res;
       // console.log('My name is Mamata',this.arrPosts); //If i want the data in html page then what i can do.
-      
-      
     })
   }
 

@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'pipeassignment'
+  name: 'digitCount'
+ 
 })
 export class PipeassignmentPipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
+  transform(value:number): number{
+    return value.toString().length;
   }
-
 }
