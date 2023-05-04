@@ -70,6 +70,8 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbRating } from '@ng-bootstrap/ng-bootstrap/rating/rating';
 import { CrudComponent } from './crud/crud.component';
+import { AuthComponent } from './auth/auth.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -133,7 +135,9 @@ import { CrudComponent } from './crud/crud.component';
     SqrtPipe,
     UxtrendzPipe,
     RatingandreviewpopupComponent,
-    CrudComponent
+    CrudComponent,
+    AuthComponent,
+    LoadingSpinnerComponent
    
   ],
   imports: [
